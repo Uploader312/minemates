@@ -21,12 +21,12 @@
     height: 100%;
     background: #1e1e1e;
     padding-top: 40px;
-    border-right: 2px solid #ff6f61;
+    border-right: 2px solid #28a745;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .sidebar h1 { font-family: 'Press Start 2P', cursive; color: #ff6f61; margin-bottom: 40px; text-align: center; }
+  .sidebar h1 { font-family: 'Press Start 2P', cursive; color: #28a745; margin-bottom: 40px; text-align: center; }
   .sidebar a {
     margin: 15px 0;
     font-weight: bold;
@@ -36,64 +36,68 @@
     padding: 10px 0;
     transition: background 0.3s;
   }
-  .sidebar a:hover { background: #ff6f61; color: #121212; border-radius: 5px; }
+  .sidebar a:hover { background: #28a745; color: #121212; border-radius: 10px; }
 
   /* Main content */
-  .main {
-    margin-left: 220px;
-    padding: 20px;
-  }
+  .main { margin-left: 220px; padding: 20px; }
 
   /* Hero section */
   .hero {
     text-align: center;
     padding: 80px 20px;
-    background: url('https://i.imgur.com/ZK0jF0v.jpg') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1559757148-5e3a1c5f5b14?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     border-radius: 10px;
     margin-bottom: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px #000;
   }
-  .hero h2 { font-size: 3em; color: #ff6f61; text-shadow: 2px 2px #000; margin-bottom: 20px; }
-  .hero p { font-size: 1.2em; margin-bottom: 30px; }
+  .hero h2 { font-size: 3em; color: #28a745; margin-bottom: 20px; }
+  .hero p { font-size: 1.2em; margin-bottom: 20px; }
+  .hero .info { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+  .hero .info div {
+    background: rgba(0,0,0,0.6); padding: 15px; border-radius: 10px; min-width: 220px;
+  }
   .hero button {
-    background: #ff6f61; border: none; padding: 15px 30px; font-size: 1em; color: #fff; border-radius: 5px;
+    background: #28a745; border: none; padding: 15px 30px; font-size: 1em; color: #fff; border-radius: 50px;
     transition: 0.3s;
   }
-  .hero button:hover { background: #ff3f2f; }
+  .hero button:hover { background: #1e7e34; }
 
   /* Sections */
   section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-  h2.section-title { font-size: 2em; color: #ff6f61; text-align: center; margin-bottom: 40px; }
+  h2.section-title { font-size: 2em; color: #28a745; text-align: center; margin-bottom: 40px; }
 
   /* Features */
   .features { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
   .feature { background: #1e1e1e; padding: 20px; border-radius: 10px; flex: 1 1 250px; text-align: center; }
-  .feature h3 { margin-bottom: 10px; color: #ff6f61; }
+  .feature h3 { margin-bottom: 10px; color: #28a745; }
 
   /* Pricing */
   .pricing { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
   .plan { background: #1e1e1e; padding: 20px; border-radius: 10px; flex: 1 1 250px; text-align: center; }
-  .plan h3 { margin-bottom: 10px; color: #ff6f61; }
+  .plan h3 { margin-bottom: 10px; color: #28a745; }
   .plan p { margin-bottom: 20px; font-size: 1.1em; }
-  .plan button { background: #ff6f61; border: none; padding: 10px 20px; color: #fff; border-radius: 5px; }
-  .plan button:hover { background: #ff3f2f; }
+  .plan button { background: #28a745; border: none; padding: 10px 20px; color: #fff; border-radius: 50px; }
+  .plan button:hover { background: #1e7e34; }
 
   /* Contact */
   .contact-form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
   .contact-form input, .contact-form textarea {
-    padding: 10px; margin-bottom: 15px; border-radius: 5px; border: none;
+    padding: 10px; margin-bottom: 15px; border-radius: 10px; border: none;
   }
-  .contact-form button { background: #ff6f61; border: none; padding: 15px; color: #fff; border-radius: 5px; }
-  .contact-form button:hover { background: #ff3f2f; }
+  .contact-form button { background: #28a745; border: none; padding: 15px; color: #fff; border-radius: 50px; }
+  .contact-form button:hover { background: #1e7e34; }
 
   /* Footer */
-  footer { text-align: center; padding: 20px; background: #1e1e1e; border-top: 2px solid #ff6f61; margin-top: 40px; }
+  footer { text-align: center; padding: 20px; background: #1e1e1e; border-top: 2px solid #28a745; margin-top: 40px; }
 
   /* Responsive */
   @media (max-width: 768px) {
-    .sidebar { width: 100%; height: auto; flex-direction: row; justify-content: space-around; border-right: none; border-bottom: 2px solid #ff6f61; padding: 10px 0; }
+    .sidebar { width: 100%; height: auto; flex-direction: row; justify-content: space-around; border-right: none; border-bottom: 2px solid #28a745; padding: 10px 0; }
     .sidebar h1 { display: none; }
     .main { margin-left: 0; margin-top: 60px; }
     .features, .pricing { flex-direction: column; }
+    .hero .info { flex-direction: column; }
   }
 </style>
 </head>
@@ -111,6 +115,20 @@
   <section id="home" class="hero">
       <h2>Reliable Minecraft Hosting</h2>
       <p>Fast, secure, and affordable Minecraft servers for your community.</p>
+      <div class="info">
+          <div>
+              <h4>Why We Are Reliable</h4>
+              <p>99.9% uptime with stable, high-performance servers.</p>
+          </div>
+          <div>
+              <h4>What We Offer</h4>
+              <p>Custom plugins, mod support, instant setup, and flexible plans.</p>
+          </div>
+          <div>
+              <h4>Uptime & Support</h4>
+              <p>24/7 support and monitoring to keep your server running smoothly.</p>
+          </div>
+      </div>
       <button onclick="scrollToSection('pricing')">Get Started</button>
   </section>
 
